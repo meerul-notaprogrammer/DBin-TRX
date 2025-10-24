@@ -35,11 +35,11 @@ testConnection();
 
 // Authentication middleware
 function authenticateRequest(req, res, next) {
-  const m = req.headers['m'];
-  const k = req.headers['k'];
+  const M = req.headers['M'];
+  const K = req.headers['K'];
   
   // Check authentication headers
-  if (m !== 'nhrdata' || k !== '9fg3gk56y9!#z#8g%yswqzd7p3357%x') {
+  if (M !== 'nhrdata' || K !== '9fg3gk56y9!#z#8g%yswqzd7p3357%x') {
     return res.status(401).json({
       status: '00',
       message: 'Authentication failed: Invalid credentials'
