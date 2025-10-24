@@ -35,10 +35,9 @@ testConnection();
 
 // Authentication middleware
 function authenticateRequest(req, res, next) {
-  const M = req.headers['M'];
-  const K = req.headers['K'];
+  const M = req.headers['m'];  
+  const K = req.headers['k']; 
   
-  // Check authentication headers
   if (M !== 'nhrdata' || K !== '9fg3gk56y9!#z#8g%yswqzd7p3357%x') {
     return res.status(401).json({
       status: '00',
